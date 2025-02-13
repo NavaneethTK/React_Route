@@ -4,7 +4,7 @@ function CardComponent({ image, title, price }) {
   return (
     <>
       <div>
-        <div className=" w-[200px] font-['inter']  shadow-[0_1px_3px_rgba(0,0,0,.3),_0_1px_2px_rgba(0,0,0,.24)] h-max  ">
+        <div className=" w-[200px] xl:w-[200px] font-['inter']  shadow-[0_1px_3px_rgba(0,0,0,.3),_0_1px_2px_rgba(0,0,0,.24)] h-max  ">
           <div className="flex justify-center p-4">
             <img src={image} className="w-[115px] h-[115px]" />
           </div>

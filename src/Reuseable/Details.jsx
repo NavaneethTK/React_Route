@@ -13,14 +13,20 @@ function Details() {
   }, []);
   return (
     <>
-      <div className="w-full flex flex-col gap-7">
-        <Navbar />
-        <div className="w-[80%] mx-auto flex">
-          <div className="w-[50%] flex justify-center">
-            <img src={product.image} alt="image" className="w-[45%]" />
+      <div className="w-full flex flex-col gap-7 pt-[30px]">
+        <div className="hidden sm:block">
+          <Navbar />
+        </div>
+        <div className=" mx-auto flex flex-col gap-[20px] items-center">
+          <div className="w-[80%] flex justify-center shadow-[0_1px_3px_rgba(0,0,0,.3),_0_1px_2px_rgba(0,0,0,.24)]">
+            <img
+              src={product.image}
+              alt="image"
+              className="h-[20%] w-[80%] p-[30px]"
+            />
           </div>
-          <div className="w-[50%] flex flex-col justify-center gap-6">
-            <div className="text-[27px] font-bold">{product.title}</div>
+          <div className="w-[70%] flex flex-col justify-center gap-6">
+            <div className="text-[14px] font-bold">{product.title}</div>
             <div className="border-2 border-[#a98b71] rounded-[10px] max-w-max px-4 py-[5px]">
               {product.category}
             </div>

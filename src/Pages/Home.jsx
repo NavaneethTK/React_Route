@@ -14,59 +14,30 @@ function Home() {
   }, []);
   return (
     <>
-      <div className="flex flex-col gap-9">
-        <Navbar />
-        <img src={sofaimg} alt="sofaimg" />
-        <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
-          <div className="flex flex-col gap-6">
-            <div className="text-[40px] font-thin">Jewellery</div>
-            <div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
-              </p>
-            </div>
-            <div className="flex gap-5">
-              {Element &&
-                Element.map((data) => {
-                  if (data.category === "jewelery") {
-                    return (
-                      <div key={data.id}>
-                        <NavLink to={`/${data.id}`}>
-                          <CardComponent
-                            title={data.title}
-                            image={data.image}
-                            price={data.price}
-                          />
-                        </NavLink>
-                      </div>
-                    );
-                  }
-                })}
-            </div>
-          </div>
+      <div className=" gap-3 md:gap-4 flex flex-col xl:gap-9">
+        <div className="hidden sm:block md:w-[768px]">
+          <Navbar />
         </div>
-        <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
-          <div className="flex flex-col gap-6">
-            <div className="text-[40px] font-thin">Electronics</div>
-            <div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
-              </p>
-            </div>
-            <div className="w-[100%] flex">
-              <div className="w-[40%]">
-                <img className="w-[95%]" src={features} alt="features" />
+        <img className=" w-[320px] " src={sofaimg} alt="sofaimg" />
+        <div className="p-[10px] flex flex-col gap-6">
+          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+            <div className=" gap-3  flex flex-col xl:gap-6">
+              <div className="text-[28px]  xl:text-[40px] font-thin text-center">
+                Jewellery
               </div>
-              <div className="w-[55%] flex flex-wrap gap-3  items-center ">
+              <div className="text-[14px] w-[300px]">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+              </div>
+              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
                 {Element &&
                   Element.map((data) => {
-                    if (data.category === "electronics") {
+                    if (data.category === "jewelery") {
                       return (
                         <div key={data.id}>
                           <NavLink to={`/${data.id}`}>
@@ -83,57 +54,63 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
-          <div className="flex flex-col gap-6">
-            <div className="text-[40px] font-thin">Men's clothing</div>
-            <div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
-              </p>
-            </div>
-            <div className="flex gap-5">
-              {Element &&
-                Element.map((data) => {
-                  if (data.category === "men's clothing") {
-                    return (
-                      <div key={data.id}>
-                        <NavLink to={`/${data.id}`}>
-                          <CardComponent
-                            title={data.title}
-                            image={data.image}
-                            price={data.price}
-                          />
-                        </NavLink>
-                      </div>
-                    );
-                  }
-                })}
+          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+            <div className="gap-3  flex flex-col xl:gap-6">
+              <div className="text-[28px]  xl:text-[40px] font-thin text-center">
+                Electronics
+              </div>
+              <div className="text-[14px] w-[300px]">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+              </div>
+              <div className="w-[100%] flex flex-col gap-3">
+                <div className=" w-[300px] xl:w-[40%]">
+                  <img className="w-[95%]" src={features} alt="features" />
+                </div>
+                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+                  {Element &&
+                    Element.map((data) => {
+                      if (data.category === "electronics") {
+                        return (
+                          <div key={data.id}>
+                            <NavLink to={`/${data.id}`}>
+                              <CardComponent
+                                title={data.title}
+                                image={data.image}
+                                price={data.price}
+                              />
+                            </NavLink>
+                          </div>
+                        );
+                      }
+                    })}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
-          <div className="flex flex-col gap-6">
-            <div className="text-[40px] font-thin">Women's clothing</div>
-            <div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
-              </p>
-            </div>
-            <div className="w-[100%] flex">
-              <div className="w-[40%]">
-                <img className="w-[95%]" src={features} alt="features" />
+          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+            <div className="gap-3  flex flex-col xl:gap-6">
+              <div className="text-[28px]  xl:text-[40px] font-thin text-center">
+                Men's clothing
               </div>
-              <div className="w-[55%] flex flex-wrap gap-3  items-center ">
+              <div className="text-[14px] w-[300px]">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+              </div>
+              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
                 {Element &&
                   Element.map((data) => {
-                    if (data.category === "women's clothing") {
+                    if (data.category === "men's clothing") {
                       return (
                         <div key={data.id}>
                           <NavLink to={`/${data.id}`}>
@@ -147,6 +124,45 @@ function Home() {
                       );
                     }
                   })}
+              </div>
+            </div>
+          </div>
+          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+            <div className="gap-3  flex flex-col xl:gap-6">
+              <div className="text-[28px]  xl:text-[40px] font-thin text-center">
+                Women's clothing
+              </div>
+              <div className="text-[14px] w-[300px]">
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book
+                </p>
+              </div>
+              <div className="w-[100%] flex flex-col gap-3">
+                <div className=" w-[300px] xl:w-[40%]">
+                  <img className="w-[95%]" src={features} alt="features" />
+                </div>
+                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+                  {Element &&
+                    Element.map((data) => {
+                      if (data.category === "women's clothing") {
+                        return (
+                          <div key={data.id}>
+                            <NavLink to={`/${data.id}`}>
+                              <CardComponent
+                                title={data.title}
+                                image={data.image}
+                                price={data.price}
+                              />
+                            </NavLink>
+                          </div>
+                        );
+                      }
+                    })}
+                </div>
               </div>
             </div>
           </div>
