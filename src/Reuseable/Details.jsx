@@ -21,12 +21,19 @@ function Details() {
           </div>
           <div className="w-[50%] flex flex-col justify-center gap-6">
             <div className="text-[27px] font-bold">{product.title}</div>
-            <div className="border-2 border-[#a98b71] rounded-[10px]">
+            <div className="border-2 border-[#a98b71] rounded-[10px] max-w-max px-4 py-[5px]">
               {product.category}
             </div>
-            <div>Rs:{product.price}</div>
             <div className="text-[#a98b71] font-bold text-[18px] leading-[25px]">
-              Rating:{product?.rating?.rate} Count:{product?.rating?.count}
+              Rs:{product.price}
+            </div>
+            <div className="text-[#a98b71]  font-bold text-[16px] leading-[25px] flex gap-9">
+              <div className="inline-flex gap-2">
+                Rating:{product?.rating?.rate}
+              </div>
+              <div className="inline-flex gap-2">
+                Count:{product?.rating?.count}
+              </div>
             </div>
             <div className="flex flex-col w-full">
               <p className="text-[#a98b71] font-bold text-[16px]">
