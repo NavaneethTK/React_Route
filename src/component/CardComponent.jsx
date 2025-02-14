@@ -9,7 +9,7 @@ function CardComponent({ image, title, price }) {
             <img src={image} className="w-[115px] h-[115px]" />
           </div>
           <div className=" whitespace-nowrap p-[5px] bg-[#fefaef]">
-            <p className="overflow-hidden text-ellipsis truncate">{title}</p>
+            <p className="overflow-hidden text-ellipsis ">{title}</p>
           </div>
           <div className="bg-[#f6f1ea]">
             <p className="text-[#999] hover:text-[#000] p-[5px]">{price}</p>

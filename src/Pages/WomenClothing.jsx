@@ -14,9 +14,11 @@ function Womenclo() {
     <>
       <div>
         <Navbar />
-        <div className="flex  flex-wrap gap-2 m-auto justify-center w-[1140px]">
-          <div className="flex flex-col gap-5">
-            <div className="text-[40px] text-center font-thin ">Jewellery</div>
+        <div className="flex  flex-wrap gap-2 m-auto justify-center w-[100%]">
+          <div className="flex flex-col gap-5 w-[85%]">
+            <div className="text-[40px] text-center font-thin ">
+              Women's Clothing
+            </div>
             <div className="text-justify ">
               <p className="text-base">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -25,7 +27,7 @@ function Womenclo() {
                 of type and scrambled it to make a type specimen book.
               </p>
             </div>
-            <div className="flex gap-5 justify-center ">
+            <div className="flex gap-5 justify-center flex-wrap">
               {Element &&
                 Element.map((data) => {
                   if (data.category === "women's clothing") {
