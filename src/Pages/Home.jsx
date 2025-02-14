@@ -18,14 +18,14 @@ function Home() {
         <div className="hidden sm:block md:w-[768px]">
           <Navbar />
         </div>
-        <img className=" w-[320px] " src={sofaimg} alt="sofaimg" />
+        <img className=" w-full " src={sofaimg} alt="sofaimg" />
         <div className="p-[10px] flex flex-col gap-6">
-          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+          <div className="flex  flex-wrap gap-2 m-auto xl:w-[1140px]">
             <div className=" gap-3  flex flex-col xl:gap-6">
               <div className="text-[28px]  xl:text-[40px] font-thin text-center">
                 Jewellery
               </div>
-              <div className="text-[14px] w-[300px]">
+              <div className="text-[14px] w-full">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -34,7 +34,7 @@ function Home() {
                   specimen book
                 </p>
               </div>
-              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-full">
                 {Element &&
                   Element.map((data) => {
                     if (data.category === "jewelery") {
@@ -54,12 +54,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+          <div className="flex  flex-wrap gap-2 m-auto xl:w-[1140px]">
             <div className="gap-3  flex flex-col xl:gap-6">
               <div className="text-[28px]  xl:text-[40px] font-thin text-center">
                 Electronics
               </div>
-              <div className="text-[14px] w-[300px]">
+              <div className="text-[14px] w-full">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -69,10 +69,10 @@ function Home() {
                 </p>
               </div>
               <div className="w-[100%] flex flex-col gap-3">
-                <div className=" w-[300px] xl:w-[40%]">
+                <div className=" w-full xl:w-[40%]">
                   <img className="w-[95%]" src={features} alt="features" />
                 </div>
-                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-full">
                   {Element &&
                     Element.map((data) => {
                       if (data.category === "electronics") {
@@ -93,12 +93,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+          <div className="flex  flex-wrap gap-2 m-auto xl:w-[1140px]">
             <div className="gap-3  flex flex-col xl:gap-6">
               <div className="text-[28px]  xl:text-[40px] font-thin text-center">
                 Men's clothing
               </div>
-              <div className="text-[14px] w-[300px]">
+              <div className="text-[14px] w-full">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -107,7 +107,7 @@ function Home() {
                   specimen book
                 </p>
               </div>
-              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+              <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-full">
                 {Element &&
                   Element.map((data) => {
                     if (data.category === "men's clothing") {
@@ -127,12 +127,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex  flex-wrap gap-2 m-auto w-[1140px]">
+          <div className="flex  flex-wrap gap-2 m-auto xl:w-[1140px]">
             <div className="gap-3  flex flex-col xl:gap-6">
               <div className="text-[28px]  xl:text-[40px] font-thin text-center">
                 Women's clothing
               </div>
-              <div className="text-[14px] w-[300px]">
+              <div className="text-[14px] w-full">
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
@@ -142,10 +142,10 @@ function Home() {
                 </p>
               </div>
               <div className="w-[100%] flex flex-col gap-3">
-                <div className=" w-[300px] xl:w-[40%]">
+                <div className=" w-full xl:w-[40%]">
                   <img className="w-[95%]" src={features} alt="features" />
                 </div>
-                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-[300px]">
+                <div className="flex gap-3 xl:gap-5 flex-wrap justify-center w-full">
                   {Element &&
                     Element.map((data) => {
                       if (data.category === "women's clothing") {
